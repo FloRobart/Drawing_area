@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activite.MainActivity"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btnNewDrawing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Commencer un dessin"
+        android:onClick="newDrawing"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <Button
+        android:id="@+id/btnResumeDrawing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reprendre un dessin"
+        android:onClick="resumeDrawing"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <Button
+        android:id="@+id/btnQuit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quitter"
+        android:onClick="quit" />
+
+
+
+</LinearLayout>

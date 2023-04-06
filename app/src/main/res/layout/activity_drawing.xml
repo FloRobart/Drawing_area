@@ -1,0 +1,196 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    >
+
+    <!-- Menu -->
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btnAnnuler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Annuler"
+                android:layout_marginHorizontal="5dp"
+                android:onClick="annuler"
+                />
+
+            <Button
+                android:id="@+id/btnRestorer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restorer"
+                android:layout_marginHorizontal="5dp"
+                android:onClick="restorer"
+                />
+
+            <Button
+                android:id="@+id/btnEffacerTout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Effacer tout"
+                android:layout_marginHorizontal="5dp"
+                android:onClick="annulerTout"
+                />
+
+            <Button
+                android:id="@+id/btnRestorerTout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restorer tout"
+                android:layout_marginHorizontal="5dp"
+                android:onClick="restorerTout"
+                />
+
+            <Button
+                android:id="@+id/btnQuitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quitter"
+                android:layout_marginHorizontal="5dp"
+                android:onClick="quitDrawingArea"
+                />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Couleurs -->
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent">
+
+            <Button
+                android:id="@+id/btnColorPicker"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Selecteur de couleur"
+                android:onClick="setTypeColor"
+                />
+
+            <Button
+                android:id="@+id/btnAleatoireColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="Couleur aléatoire"
+                android:onClick="setTypeColor"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="Dégrader animé"
+                android:onClick="setDegrader"
+                />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Formes -->
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/btnLigne"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ligne"
+                android:layout_marginHorizontal="5dp"
+                android:onClick="changeTypeForme"
+                />
+
+            <ImageButton
+                android:id="@+id/btnRectangle"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/carre"
+                android:layout_marginHorizontal="5dp"
+                android:onClick="changeTypeForme"
+                />
+
+            <ImageButton
+                android:id="@+id/btnCercle"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/cercle"
+                android:layout_marginHorizontal="5dp"
+                android:onClick="changeTypeForme"
+                />
+
+            <ImageButton
+                android:id="@+id/btnRempli"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/rempli"
+                android:layout_marginHorizontal="5dp"
+                android:onClick="setRempli"
+                />
+
+            <ImageButton
+                android:id="@+id/btnLibre"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/libre"
+                android:layout_marginHorizontal="5dp"
+                android:onClick="changeTypeForme"
+                />
+
+            <SeekBar
+                android:id="@+id/sbStroke"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:min="1"
+                android:max="50"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:id="@+id/tvStroke"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="40dp"
+                android:text="1" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Séparation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        />
+
+    <!-- Dessin -->
+    <com.example.drawing_area.vues.DrawingView
+        android:id="@+id/drawingArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
